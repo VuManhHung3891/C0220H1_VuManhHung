@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+Nhập bán kính : <input type="text" id="radius"></br>
+<input type="button" value="Vẽ hình tròn" onclick="drawCircle(radius.value);"></br>
+<canvas id="myCircle"></canvas>
+<p id="result"></p>
+
+<script>
+    var Circle = function (radius) { //Thuộc tính
+        this.radius = radius;
+        this.getRadius = function () {
+            \
+            return this.radius;
+        };
+        this.getPerimeter = function () { // phương thức get chu vi
+            return 2 * Math.PI * this.radius;
+        };
+        this.getArea = function () { // phương thức get diện tích
+            return Math.PI * this.radius * this.radius;
+        };
+        this.draw = function (id) {
+            let context = document.getElementById(id).getContext("2d");
+            context.beginPath();
+            context.arc(100, 75, this.radius, 0, 2 * Math.PI);
+            context.fillStyle = "#FF0000";
+            context.fill();
+        }
+        this.display = function () {
+            return "Dien tich " + this.getArea() + ", chu vi : " + this.getPerimeter();
+        }
+    }
+    function drawCircle(radius) {
+        let result = document.getElementById("result");
+        let rec = new Circle(radius);
+        rec.draw("myCircle");
+        result.innerText = rec.display();
+    }
+
+</script>
+
+
+
+
+</body>
+</html>

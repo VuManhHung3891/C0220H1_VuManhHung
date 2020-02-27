@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Apple = function (type,color) {
+        this.type = type ;
+        this.color = color ;
+        this.getType = function () {
+            return this.type;
+        }
+        this.getColor = function() {
+            return this.color;
+        }
+        this.getInfo = function () {
+            return "color :" + this.color + 'type :' + this.type + 'apple';
+        };
+    }
+    let apple = new Apple("macintosh","red");
+    alert(apple.getInfo());
+    alert(apple.getColor());
+    alert(apple.getType());
+
+</script>
+
+</body>
+</html>
