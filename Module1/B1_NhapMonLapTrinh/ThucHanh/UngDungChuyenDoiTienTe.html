@@ -20,19 +20,31 @@ Số Tiền :
         <option value="US">USD</option>
     </select>
     <button onclick="chuyendoi();return false">chuyển đổi</button>
+    <p>id="ketQua"</p>
 </form>
-<p id="ketQua"></p>
+
+
 <script>
     function chuyendoi() {
-        var soTien = document.getElementById("soTien").value;
-        var chonTu = document.getElementById("chonTu").value;
-        var chonSang = document.getElementById("chonSang").value;
-        var ketQua = document.getElementById("ketQua");
+        let soTien = document.getElementById("soTien").value;
+        let chonTu = document.getElementById("chonTu").value;
+        let chonSang = document.getElementById("chonSang").value;
+        let ketQua = document.getElementById("ketQua");
         if (chonTu == "VN" && chonSang == "US") {
-            ketQua.innerText =soTien / 23000;
+            ketQua.innerText = soTien / 23000;
+        }
+        else if  (chonTu == "US" && chonSang == "VN"){
+            ketQua.innerText = soTien * 23000;
         }
 
+
+
+
+
+
+
     }
+
 </script>
 </body>
 </html>

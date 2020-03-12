@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<button type="button" onclick="ex1()";>Bài 1</button>
+<button type="button" onclick="ex2()";>Bài 2</button>
+<button type="button" onclick="ex3()";>Bài 3</button>
+<button type="button" onclick="ex4()";>Bài 4</button>
+<script>
+    function ex1() {
+        let a = parseFloat(prompt("Nhap diem vat ly"));
+        let b = parseFloat(prompt("Nhap diem hoa hoc"));
+        let c = parseFloat(prompt("Nhap diem sinh hoc"));
+
+        let tb = (a+b+c)/3
+
+        alert("Diem trung binh la: "+tb);
+    }
+    function ex2() {
+        let C = parseFloat(prompt("Nhap gia tri do C:"));
+        let F = (9*C)/5 + 32;
+        alert("Gia tri do F la: "+F);
+    }
+    function ex3() {
+        let r = parseFloat(prompt("Nhap ban kinh:"));
+        let area = 3.14159*r*r;
+        alert("Dien tich hinh tron la: "+area);
+    }
+    function ex4() {
+        let r = parseFloat(prompt("Nhap ban kinh:"));
+        let circuit = 2*3.14159*r;
+        alert("Chu vi hinh tron la: "+circuit);
+    }
+</script>
+
+</body>
+</html>
